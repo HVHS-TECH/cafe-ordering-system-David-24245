@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     padding: 5px 20px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     height: 50px;
     position: sticky;
     top:0;
@@ -13,7 +13,7 @@
   .Nav-Links {
     gap: 20px;
     display: flex;
-    margin-left: 600px;
+    margin-left: 750px;
   }
 
   .Navbar a.active {
