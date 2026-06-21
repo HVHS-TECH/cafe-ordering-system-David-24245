@@ -47,6 +47,8 @@ nav {
   height: 929px;
   object-fit: cover;
   display: block;
+  object-position: bottom;
+  margin-top: 15px;
 }
 
 .Cafelogo {
