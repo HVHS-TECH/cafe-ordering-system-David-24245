@@ -39,3 +39,12 @@ nav {
 .Navbar a.active {
   border-bottom-color: #c8a04a !important;
 }
+
+.Cafe {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
