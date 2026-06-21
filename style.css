@@ -42,9 +42,7 @@ nav {
 
 .Cafe {
   width: 100%;
-  max-width: 1900px;
-  height: auto;
+  height: 868px;
+  object-fit: cover;
   display: block;
-  margin: 0 auto;
-  border-radius: 12px;
 }
