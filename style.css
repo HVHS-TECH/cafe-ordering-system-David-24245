@@ -42,6 +42,12 @@ nav {
 }
 ****************************/
 
+.Front {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
 .Cafe {
   width: 100%;
   height: 929px;
