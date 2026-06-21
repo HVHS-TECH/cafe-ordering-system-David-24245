@@ -41,24 +41,9 @@ nav {
   border-bottom-color: #c8a04a !important;
 }
 ****************************/
-
-.Front {
-  position: relative;
-  width: 100%;
-  display: block;
-}
-
-.Cafe {
+.CafeNew {
   width: 100%;
   height: 929px;
   object-fit: cover;
   display: block;
-}
-
-.Cafelogo {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 250px;
-  height: auto;
 }
