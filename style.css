@@ -1,27 +1,23 @@
-  nav {
-    background-color:white;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    height: 50px;
-    position: sticky;
-    top:0;
-    z-index: 100;
-  }
-  
-  .Nav-Links {
-    gap: 20px;
-    display: flex;
-    margin-left: 750px;
-  }
+nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-  .Navbar a.active {
-    border-bottom: 2px solid #c8a04a !important;
-    padding: 5px;
-  }
+.Nav-Links {
+  gap: 20px;
+  display: flex;
+  margin-left: 750px;
+}
 
-.Navbar a:link, .Navbar a:visited {
+.Navbar a:link,
+.Navbar a:visited {
   background-color: white;
   color: black;
   padding: 15px 20px;
@@ -35,6 +31,11 @@
   border-radius: 12px;
 }
 
-.Navbar a:hover, .Navbar a:active {
-    border-bottom: 2px solid white;
+.Navbar a:hover,
+.Navbar a:active {
+  border-bottom-color: white; 
+}
+
+.Navbar a.active {
+  border-bottom-color: #c8a04a !important;
 }
