@@ -31,6 +31,9 @@
   z-index: -1;
 }
 
+.order:hover {
+  color: black;
+}
 
 .order:hover::before {
   left: 0;
