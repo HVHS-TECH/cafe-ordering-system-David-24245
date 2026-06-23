@@ -6,10 +6,12 @@
 }
 
 .order {
-  margin-top: 15px;
+  position: absolute;
+  top: 320px;
+  left: 220px;
   padding: 8px 20px;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid white;
+  color: white;
   text-decoration: none;
   font-family: "Lora", serif;
   font-size: 14px;
@@ -17,4 +19,9 @@
 
 .order:hover {
   background-color: #f1f1f1;
+}
+
+.Front {
+  position: relative;
+  width: 100%;
 }
