@@ -17,6 +17,7 @@
   font-size: 18px;
   overflow: hidden;
   z-index: 1;
+  border-radius: 7.5px;
 }
 
 .order::before {
