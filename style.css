@@ -7,14 +7,14 @@
 
 .order {
   position: absolute;
-  top: 320px;
-  left: 220px;
-  padding: 8px 20px;
+  top: 360px;
+  left: 480px;
+  padding: 15px 30px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
   font-family: "Lora", serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .order:hover {
