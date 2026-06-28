@@ -6,7 +6,36 @@
 </head>
 <body>
 
-  
+    <div id="spaceForJavaScriptOutput">  </div>
+
+    <!----------------- Name ------------------>
+<form onsubmit="return false;">
+    <label for="formName">Name:</label>
+    <input type="text" id="nameField" name="formName" placeholder="Name"> 
+    <input type="submit" onClick="getFormInput()">  
+</form>
+
+    <!----------------- Order ------------------>
+  <form onsubmit="return false;">
+    <label for="itemField">Enter item number:</label>
+    <input type="text" id="itemField" placeholder="1-8">
+    <input type="submit" value="Add Item" onClick="addItem()">
+  </form>
+
+    <!----------------- Payment ------------------>
+    <form onsubmit="return false;">
+
+    <label for="formMoney">Payment:</label>
+    <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
+
+    <input type="submit" onClick="getFormInput()">  
+  </form>
+
+    <!----------------- Display Order ------------------>
+    <form onsubmit="return false;">
+    <input type="submit" value="Display Order" onClick="displayList()">
+  </form>
+
 <script src="script.js"></script>
 </body>
 </html>
