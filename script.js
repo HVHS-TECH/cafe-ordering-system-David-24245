@@ -28,6 +28,14 @@ function getFormInput(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");  
     let userName = NAME_FIELD.value;
     OUTPUT.innerHTML = "<p>Your name is " + userName + "</p>";
+
+    let item = document.getElementById("nameField").value;
+    
+    shoppingList.push(item);
+    console.log("Added: " + item);
+
+    OUTPUT.innerHTML = "<p>You have added " + item + " to the list.</p>";
+    document.getElementById("itemField").value = "";
 }
 
     /*************** Order ***************/
