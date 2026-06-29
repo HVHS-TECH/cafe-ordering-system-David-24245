@@ -28,12 +28,6 @@ function getFormInput(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");  
     let userName = NAME_FIELD.value;
     OUTPUT.innerHTML = "<p>Your name is " + userName + "</p>";
-
-    for (let i = 0; i < shoppingList.length; i++) {
-        OUTPUT.innerHTML += shoppingList[i] + "<br>";
-    }
-
-    console.log("List displayed Items: " + shoppingList.length);
 }
 
     /*************** Order ***************/
