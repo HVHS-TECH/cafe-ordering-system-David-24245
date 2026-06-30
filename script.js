@@ -7,7 +7,7 @@ let age = 15;
 let pocketMoney = 20;
 let birthYear;
 let oldAge;
-let halfMoney;        
+let halfMoney;
 birthYear = year - age;
 oldAge = age + 10;
 halfMoney = pocketMoney / 2;
