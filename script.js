@@ -32,4 +32,7 @@ function addName(){
 
     userName = name;
     console.log("Name: " + name);
+
+    OUTPUT.innerHTML = "<p>Order Name " + name + ".</p>";
+    document.getElementById("nameField").value = "";
 }
