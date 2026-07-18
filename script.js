@@ -28,4 +28,8 @@ Functions
 
 function addName(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    let name = document.getElementById("nameField").value;
+
+    userName = name;
+    console.log("Name: " + name);
 }
