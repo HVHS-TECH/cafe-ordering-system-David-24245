@@ -15,9 +15,10 @@ let shoppingList = [];
 
 
 /****************************
-Main code
+Arrays
 ****************************/
 
+let menuItem = ["Croissant", "Bagel", "Muffin", "Brownie", "Espresso",]
 /****************************
 Functions
 ****************************/
