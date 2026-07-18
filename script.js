@@ -12,6 +12,7 @@ birthYear = year - age;
 oldAge = age + 10;
 halfMoney = pocketMoney / 2;
 let shoppingList = [];
+let orderTotal = 0;
 
 
 /****************************
