@@ -19,7 +19,7 @@ Arrays
 ****************************/
 
 let items = ["Croissant", "Bagel", "Muffin", "Brownie", "Espresso", "Latte", "Hot Chocolate", "Cappuccino"];
-let itemPrices = 
+let itemPrices = [6, 7, 7, 4, 9, 9, 9, 9];
 /****************************
 Functions
 ****************************/
