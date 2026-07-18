@@ -27,5 +27,5 @@ Functions
 ****************************/
 
 function addName(){
-    const
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 }
