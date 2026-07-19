@@ -42,10 +42,4 @@ function addItem(){
     let name = document.getElementById("nameField").value;
 
     if (choice === ""){
-        OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
-    } else if (choice < 1){
-        OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
-    } else if (choice > 8){
-        OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
-    }
 }
