@@ -70,31 +70,30 @@ function calculateChange(_money, _price){
     return change;
 }
 
-function displayReceipt(){
-    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-
+function goToReceiptPage(){
     userName = document.getElementById("nameField").value;
     userMoney = document.getElementById("moneyField").value;
 
-    OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
+    const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
+
+    RECEIPT_OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
 
     for (let i = 0; i < itemList.length; i++) {
-        OUTPUT.innerHTML += itemList[i] + " - $" + priceList[i] + "<br>";
+    RECEIPT_OUTPUT.innerHTML += itemList[i] + " - $" + priceList[i] + "<br>";
     }
 
-    OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
+    RECEIPT_OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
 
     if (userMoney < orderTotal){
-        console.log("Sorry you can't afford the order");
-        OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
+        RECEIPT_OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
     } else {
         let change = calculateChange(userMoney, orderTotal);
-        console.log("You can afford the order");
-        OUTPUT.innerHTML += "<p>Payment: $" + userMoney + "</p>";
-        OUTPUT.innerHTML += "<p>Change: $" + change + "</p>";
+        RECEIPT_OUTPUT.innerHTML += "<p>Payment: $" + userMoney + "</p>";
+        RECEIPT_OUTPUT.innerHTML += "<p>Change: $" + change + "</p>";
     }
 
-    console.log("Receipt displayed. Items: " + itemList.length);
+    document.getElementById("orderPage").classList.add("hidden");
+    
 }
 
 function restartOrder(){
