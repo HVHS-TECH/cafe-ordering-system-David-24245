@@ -67,7 +67,9 @@ function addItem(){
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
         return;
     }
-    
+
     itemList.push(item);
     orderTotal += itemPrice;
+
+    console.log("Added: " + item)
 }
