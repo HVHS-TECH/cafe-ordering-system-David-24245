@@ -88,4 +88,17 @@ function displayReceipt(){
     OUTPUT.innerHTML += itemList[i] + "<br>";
     }
 
+    OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
+
+    if (userMoney < orderTotal){
+        console.log("Sorry you can't afford the order");
+        OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
+    } else {
+        let change = calculateChange(userMoney, orderTotal);
+        console.log("You can afford the order");
+        OUTPUT.innerHTML += "<p>Payment: $" + userMoney + "</p>";
+        OUTPUT.innerHTML += "<p>Change: $" + change + "</p>";
+    }
+
+    console.log("Receipt displayed. Items: " + itemList.length);
 }
