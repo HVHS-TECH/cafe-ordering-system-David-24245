@@ -25,14 +25,9 @@ Arrays
 Functions
 ****************************/
 
-function submitOrder(){
+function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-
-    let name = document.getElementById("nameField").value;
     let choice = document.getElementById("itemField").value;
-    userMoney = document.getElementById("moneyField").value;
-
-    userName = name;
 
     if (choice == 1){
         item = "Croissant";
@@ -67,11 +62,9 @@ function submitOrder(){
     orderTotal += itemPrice;
 
     console.log("Added: " + item + " ($" + itemPrice + ")");
-    OUTPUT.innerHTML = "<p>Thanks " + userName + ", added " + item + " ($" + itemPrice + ") to your order.</p>";
+    OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
 
-    document.getElementById("nameField").value = "";
     document.getElementById("itemField").value = "";
-    document.getElementById("moneyField").value = "";
 }
 
 function calculateChange(_money, _price){
@@ -82,10 +75,13 @@ function calculateChange(_money, _price){
 function displayReceipt(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
+    userName = document.getElementById("nameField").value;
+    userMoney = document.getElementById("moneyField").value;
+
     OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
 
     for (let i = 0; i < itemList.length; i++) {
-    OUTPUT.innerHTML += itemList[i] + "<br>";
+        OUTPUT.innerHTML += itemList[i] + "<br>";
     }
 
     OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
