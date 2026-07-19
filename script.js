@@ -13,14 +13,12 @@ oldAge = age + 10;
 halfMoney = pocketMoney / 2;
 let shoppingList = [];
 let orderTotal = 0;
-
+let item;
+let itemPrice;
 
 /****************************
 Arrays
 ****************************/
-
-let items = ["Croissant", "Bagel", "Muffin", "Brownie", "Espresso", "Latte", "Hot Chocolate", "Cappuccino"];
-let itemPrices = [6, 7, 7, 4, 9, 9, 9, 9];
 
 /****************************
 Functions
@@ -42,5 +40,5 @@ function addItem(){
     let name = document.getElementById("nameField").value;
 
     if (choice == 1){
-        
+
 }
