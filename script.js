@@ -41,5 +41,6 @@ function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let name = document.getElementById("nameField").value;
 
-    if (choice === ""){
+    if (choice == 1){
+        
 }
