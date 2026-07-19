@@ -67,7 +67,7 @@ function submitOrder(){
     orderTotal += itemPrice;
 
     console.log("Added: " + item + " ($" + itemPrice + ")");
-    OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
+    OUTPUT.innerHTML = "<p>Thanks " + userName + ", added " + item + " ($" + itemPrice + ") to your order.</p>";
 
     document.getElementById("nameField").value = "";
     document.getElementById("itemField").value = "";
