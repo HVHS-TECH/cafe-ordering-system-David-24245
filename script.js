@@ -15,6 +15,7 @@ let itemList = [];
 let orderTotal = 0;
 let item;
 let itemPrice;
+let userMoney;
 
 /****************************
 Arrays
@@ -24,7 +25,7 @@ Arrays
 Functions
 ****************************/
 
-function addName(){
+function submitOrder(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let name = document.getElementById("nameField").value;
 
