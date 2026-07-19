@@ -68,4 +68,6 @@ function addItem(){
         return;
     }
     
+    itemList.push(item);
+    orderTotal += itemPrice;
 }
