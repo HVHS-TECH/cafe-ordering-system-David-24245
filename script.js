@@ -99,6 +99,7 @@ function goToReceiptPage(){
         document.getElementById("orderPage").classList.remove("hidden");
         document.getElementById("receiptPage").classList.add("hidden");
     }
+
 }
 
 function restartOrder(){
