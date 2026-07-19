@@ -36,3 +36,12 @@ function addName(){
     OUTPUT.innerHTML = "<p>Order Name " + name + ".</p>";
     document.getElementById("nameField").value = "";
 }
+
+function addItem(){
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    let name = document.getElementById("nameField").value;
+
+    if (choice === ""){
+        OUTPUT.innerHTML = 
+    }
+}
