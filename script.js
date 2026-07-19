@@ -40,5 +40,9 @@ function addItem(){
     let name = document.getElementById("nameField").value;
 
     if (choice == 1){
-
-}
+        item = "Croissant";
+        itemPrice = 6;
+    } else if (choice == 2){
+        item = "Bagel";
+        itemPrice = 7;
+    } else
