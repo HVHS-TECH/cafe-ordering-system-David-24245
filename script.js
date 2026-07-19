@@ -102,7 +102,7 @@ function restartOrder(){
 
     itemList = [];
     priceList = [];
-    ordertotal = 0;
+    orderTotal = 0;
     userName = "";
     userMoney = "";
 
