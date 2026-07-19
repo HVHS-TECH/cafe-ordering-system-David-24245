@@ -94,13 +94,12 @@ function goToReceiptPage(){
 
     document.getElementById("orderPage").classList.add("hidden");
     document.getElementById("receiptPage").classList.remove("hidden");
+}
 
     function goToOrderPage(){
         document.getElementById("orderPage").classList.remove("hidden");
         document.getElementById("receiptPage").classList.add("hidden");
     }
-
-}
 
 function restartOrder(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
