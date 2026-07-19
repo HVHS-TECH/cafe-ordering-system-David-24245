@@ -96,3 +96,17 @@ function displayReceipt(){
 
     console.log("Receipt displayed. Items: " + itemList.length);
 }
+
+function restartOrder(){
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+
+    itemList = [];
+    priceList = [];
+    ordertotal = 0;
+    userName = "";
+    userMoney = "";
+
+    document.getElementById("nameField").value = "";
+    document.getElementById("itemField").value = "";
+    document.getElementById("moneyField").value = "";
+}
