@@ -27,15 +27,12 @@ Functions
 
 function submitOrder(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+
     let name = document.getElementById("nameField").value;
+    let choice = document.getElementById("itemField").value;
     userMoney = document.getElementById("moneyField").value;
 
     userName = name;
-}
-
-function addItem(){
-    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-     let choice = document.getElementById("itemField").value;
 
     if (choice == 1){
         item = "Croissant";
@@ -71,7 +68,10 @@ function addItem(){
 
     console.log("Added: " + item + " ($" + itemPrice + ")");
     OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
+
+    document.getElementById("nameField").value = "";
     document.getElementById("itemField").value = "";
+    document.getElementById("moneyField").value = "";
 }
 
 function displayList() {
