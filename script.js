@@ -87,4 +87,8 @@ function displayList() {
     OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
     console.log("List displayed Items: " + itemList.length);
     }
+
+function calculateChange(_money, _price){
+    let change = _money - _price;
+    return change;
 }
