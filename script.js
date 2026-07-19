@@ -93,7 +93,11 @@ function goToReceiptPage(){
     }
 
     document.getElementById("orderPage").classList.add("hidden");
-    
+    document.getElementById("receiptPage").classList.remove("hidden");
+
+    function goToOrderPage(){
+        
+    }
 }
 
 function restartOrder(){
