@@ -6,15 +6,13 @@
 </head>
 <body>
 
-  
-
     <div id="spaceForJavaScriptOutput"></div>
 
     <!----------------- Name ------------------>
 <form onsubmit="return false;">
-    <label for="formName">Name:</label>
+    <label for="nameField">Name:</label>
     <input type="text" id="nameField" name="formName" placeholder="Name"> 
-    <input type="submit" onClick="getFormInput()">  
+    <input type="submit" onClick="addName()">  
 </form>
 
     <!----------------- Order ------------------>
@@ -27,10 +25,10 @@
     <!----------------- Payment ------------------>
     <form onsubmit="return false;">
 
-    <label for="formMoney">Payment:</label>
+    <label for="moneyField">Payment:</label>
     <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
 
-    <input type="submit" onClick="getFormInput()">  
+    <input type="submit" onClick="checkPayment()">  
   </form>
 
     <!----------------- Display Order ------------------>
@@ -39,5 +37,5 @@
   </form>
 
 <script src="script.js"></script>
-</body>+
+</body>
 </html>
