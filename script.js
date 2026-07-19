@@ -11,7 +11,7 @@ let halfMoney;
 birthYear = year - age;
 oldAge = age + 10;
 halfMoney = pocketMoney / 2;
-let shoppingList = [];
+let itemList = [];
 let orderTotal = 0;
 let item;
 let itemPrice;
