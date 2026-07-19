@@ -71,5 +71,7 @@ function addItem(){
     itemList.push(item);
     orderTotal += itemPrice;
 
-    console.log("Added: " + item)
+    console.log("Added: " + item + " ($" + itemPrice + ")");
+    OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
+    document.getElementById("itemField").value = "";
 }
