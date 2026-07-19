@@ -42,6 +42,6 @@ function addItem(){
     let name = document.getElementById("nameField").value;
 
     if (choice === ""){
-        OUTPUT.innerHTML = 
+        OUTPUT.innerHTML = "<p>"
     }
 }
