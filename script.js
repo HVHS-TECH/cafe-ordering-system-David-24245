@@ -42,6 +42,6 @@ function addItem(){
     let name = document.getElementById("nameField").value;
 
     if (choice === ""){
-        OUTPUT.innerHTML = "<p>"
-    }
+        OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
+    } else
 }
