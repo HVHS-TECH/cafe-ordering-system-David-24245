@@ -92,3 +92,18 @@ function calculateChange(_money, _price){
     let change = _money - _price;
     return change;
 }
+
+function checkPayment(){
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    let userMoney = document.getElementById("moneyField").value;
+
+    if (userMoney < orderTotal){
+        console.log("Sorry you can't afford the order");
+        OUTPUT.innerHTML = "<p>Sorry, you can't afford the order.</p>";
+    } else {
+        let change = calculateChange(userMoney, orderTotal);
+        console.log("You can afford the order");
+        OUTPUT.innerHTML = "<p>You can afford the order!</p>";
+        OUTPUT.innerHTML += "<p>You will get $" + change + " change.</p>";
+    }
+}
