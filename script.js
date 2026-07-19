@@ -99,8 +99,6 @@ function goToReceiptPage(){
     function goToOrderPage(){
         document.getElementById("orderPage").classList.remove("hidden");
         document.getElementById("receiptPage").classList.add("hidden");
-
-        const RECEIPT_OUTPUT = 
     }
 
 function restartOrder(){
