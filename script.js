@@ -12,6 +12,7 @@ birthYear = year - age;
 oldAge = age + 10;
 halfMoney = pocketMoney / 2;
 let itemList = [];
+let priceList = [];
 let orderTotal = 0;
 let item;
 let itemPrice;
@@ -59,6 +60,7 @@ function addItem(){
     }
 
     itemList.push(item);
+    priceList.push(itemPrice);
     orderTotal += itemPrice;
 
     console.log("Added: " + item + " ($" + itemPrice + ")");
@@ -81,7 +83,7 @@ function displayReceipt(){
     OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
 
     for (let i = 0; i < itemList.length; i++) {
-        OUTPUT.innerHTML += itemList[i] + "<br>";
+        OUTPUT.innerHTML += itemList[i] + " - $" + priceList[i] + "<br>";
     }
 
     OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
