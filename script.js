@@ -28,12 +28,9 @@ Functions
 function submitOrder(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let name = document.getElementById("nameField").value;
+    userMoney = document.getElementById("moneyField").value;
 
     userName = name;
-    console.log("Name: " + name);
-
-    OUTPUT.innerHTML = "<p>Order Name " + name + ".</p>";
-    document.getElementById("nameField").value = "";
 }
 
 function addItem(){
