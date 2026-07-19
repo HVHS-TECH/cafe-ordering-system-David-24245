@@ -79,5 +79,12 @@ function addItem(){
 function displayList() {
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     OUTPUT.innerHTML = "<p>Order for " + userName + ":</p>";
-    
+
+    for (let i = 0; i < itemList.length; i++) {
+    OUTPUT.innerHTML += itemList[i] + "<br>";
+    }
+
+    OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
+    console.log("List displayed Items: " + itemList.length);
+    }
 }
