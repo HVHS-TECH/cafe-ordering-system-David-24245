@@ -37,7 +37,7 @@ function addName(){
 
 function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-    let name = document.getElementById("nameField").value;
+     let choice = document.getElementById("itemField").value;
 
     if (choice == 1){
         item = "Croissant";
