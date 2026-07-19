@@ -75,3 +75,9 @@ function addItem(){
     OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
     document.getElementById("itemField").value = "";
 }
+
+function displayList() {
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    OUTPUT.innerHTML = "<p>Order for " + userName + ":</p>";
+    
+}
