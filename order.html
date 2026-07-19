@@ -6,22 +6,27 @@
 </head>
 <body>
 
-    <div id="spaceForJavaScriptOutput"></div>
-
     <!----------------- Order Form ------------------>
     <div id="orderPage">
+        <div id="spaceForJavaScriptOutput"></div>
+
         <form onsubmit="return false;">
-    <label for="nameField">Name:</label>
-    <input type="text" id="nameField" name="formName" placeholder="Name"> 
-    <br>
-    <label for="itemField">Enter item number:</label>
-    <input type="text" id="itemField" placeholder="1-8">
-    <input type="submit" value="Add Item" onClick="addItem()">
-    <br>
-    <label for="moneyField">Payment:</label>
-    <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
-</form>
-</div>
+            <label for="nameField">Name:</label>
+            <input type="text" id="nameField" name="formName" placeholder="Name"> 
+            <br>
+            <label for="itemField">Enter item number:</label>
+            <input type="text" id="itemField" placeholder="1-8">
+            <input type="submit" value="Add Item" onClick="addItem()">
+            <br>
+            <label for="moneyField">Payment:</label>
+            <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
+        </form>
+
+        <form onsubmit="return false;">
+            <input type="submit" value="View Receipt" onClick="goToReceiptPage()">
+            <input type="submit" value="Restart Order" onClick="restartOrder()">
+        </form>
+    </div>
 
     <!----------------- Receipt ------------------>
     <div id="receiptPage" class="hidden">
