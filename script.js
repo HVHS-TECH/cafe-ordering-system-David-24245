@@ -111,4 +111,5 @@ function restartOrder(){
     document.getElementById("moneyField").value = "";
 
     OUTPUT.innerHTML = "<p> </p>";
+    console.log("Order restarted");
 }
