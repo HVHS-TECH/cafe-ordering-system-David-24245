@@ -109,4 +109,6 @@ function restartOrder(){
     document.getElementById("nameField").value = "";
     document.getElementById("itemField").value = "";
     document.getElementById("moneyField").value = "";
+
+    OUTPUT.innerHTML = "<p> </p>";
 }
