@@ -96,8 +96,8 @@ function goToReceiptPage(){
     document.getElementById("receiptPage").classList.remove("hidden");
 
     function goToOrderPage(){
-    document.getElementById("orderPage").classList.remove("hidden");
-    document.getElementById("receiptPage").classList.add("hidden");
+        document.getElementById("orderPage").classList.remove("hidden");
+        document.getElementById("receiptPage").classList.add("hidden");
     }
 }
 
