@@ -18,6 +18,10 @@ let item;
 let itemPrice;
 let userMoney;
 
+let itemQuantity;
+let removeCroissant;
+let addCroissant;
+
 /****************************
 Functions
 ****************************/
@@ -102,6 +106,23 @@ function goToReceiptPage(){
     }
 
 function restartOrder(){
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+
+    itemList = [];
+    priceList = [];
+    orderTotal = 0;
+    userName = "";
+    userMoney = "";
+
+    document.getElementById("nameField").value = "";
+    document.getElementById("itemField").value = "";
+    document.getElementById("moneyField").value = "";
+
+    OUTPUT.innerHTML = "<p> </p>";
+    console.log("Order restarted");
+}
+
+function addCroissant0(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
     itemList = [];
