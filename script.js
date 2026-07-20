@@ -17,7 +17,6 @@ let orderTotal = 0;
 let item;
 let itemPrice;
 let userMoney;
-
 let itemQuantity;
 let removeCroissant;
 let addCroissant;
@@ -125,5 +124,5 @@ function restartOrder(){
 function addCroissant0(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
-    let itemQuantity = ;
+    let itemQuantity = "";
 }
