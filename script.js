@@ -125,11 +125,7 @@ function restartOrder(){
 function addCroissant0(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
-    itemList = [];
-    priceList = [];
-    orderTotal = 0;
-    userName = "";
-    userMoney = "";
+    itemQuantity = ;
 
     document.getElementById("nameField").value = "";
     document.getElementById("itemField").value = "";
