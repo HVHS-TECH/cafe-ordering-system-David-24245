@@ -17,7 +17,7 @@
             <label for="nameField">Name:</label>
             <input type="text" id="nameField" name="formName" placeholder="Name"> 
             <br>
-            <label for="itemField">Enter item:</label>
+            <label for="itemField">Item:</label>
             <input type="text" id="itemField" placeholder="1-8">
             <input type="submit" value="Add Item" onClick="addItem()">
             <br>
@@ -35,12 +35,6 @@
     <div id="receiptPage" class="hidden">
       <div id="receiptOutput"></div>
       <button onclick="goToOrderPage()">Back to Order</button>
-
-        <form onsubmit="return false;">
-        <input type="submit" value="Remove" onClick="goToReceiptPage()">
-        <input type="submit" value="Add" onClick="restartOrder()">
-        </form>
-
     </div>
 
 <script src="script.js"></script>
