@@ -120,9 +120,3 @@ function restartOrder(){
     OUTPUT.innerHTML = "<p> </p>";
     console.log("Order restarted");
 }
-
-function addCroissant0(){
-    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-
-    let itemQuantity = "";
-}
