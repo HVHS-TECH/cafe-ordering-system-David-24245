@@ -17,7 +17,7 @@ let orderTotal = 0;
 let item;
 let itemPrice;
 let userMoney;
-let itemQuantity;
+let CroissantQuantity;
 let removeCroissant;
 let addCroissant;
 
@@ -30,7 +30,7 @@ function addItem(){
     let choice = document.getElementById("itemField").value;
 
     if (choice == 1){
-        item = "Croissant";
+        CroissantQuantity =  item = "Croissant";
         itemPrice = 6;
     } else if (choice == 2){
         item = "Bagel";
