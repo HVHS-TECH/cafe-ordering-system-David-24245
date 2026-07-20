@@ -30,7 +30,7 @@ function addItem(){
     let choice = document.getElementById("itemField").value;
 
     if (choice == 1){
-        CroissantQuantity =  item = "Croissant";
+        item = "Croissant";
         itemPrice = 6;
     } else if (choice == 2){
         item = "Bagel";
