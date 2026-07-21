@@ -18,7 +18,7 @@ let item;
 let itemPrice;
 let userMoney;
 
-let itemQuantity = [];
+let quantityList = [];
 let CroissantQuantity;
 let removeCroissant;
 let addCroissant;
