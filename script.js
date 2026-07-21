@@ -20,7 +20,6 @@ let userMoney;
 let CroissantQuantity;
 let removeCroissant;
 let addCroissant;
-let choice = document.getElementById("quantityField").value;
 
 /****************************
 Functions
@@ -29,6 +28,24 @@ Functions
 function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let choice = document.getElementById("itemField").value;
+
+    if (choice == 1){
+        croissantQuantity = "1x";
+    } else if (choice == 2){
+        item = "Bagel";
+    } else if (choice == 3){
+        item = "Muffin";
+    } else if (choice == 4){
+        item = "Brownie";
+    } else if (choice == 5){
+        item = "Espresso";
+    } else if (choice == 6){
+        item = "Latte";
+    } else if (choice == 7){
+        item = "Hot Chocolate";
+    } else if (choice == 8){
+        item = "Cappuccino";
+    }
 
     if (choice == 1){
         item = "Croissant";
