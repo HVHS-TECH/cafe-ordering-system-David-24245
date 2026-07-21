@@ -125,6 +125,9 @@ function restartOrder(){
 
     itemList = [];
     priceList = [];
+    let Items1 = [];
+    let quantities = [];
+    let unitPrices = [];
     orderTotal = 0;
     userName = "";
     userMoney = "";
