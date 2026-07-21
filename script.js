@@ -20,6 +20,7 @@ let userMoney;
 let CroissantQuantity;
 let removeCroissant;
 let addCroissant;
+let choice = document.getElementById("quantityField").value;
 
 /****************************
 Functions
