@@ -17,6 +17,7 @@ let orderTotal = 0;
 let item;
 let itemPrice;
 let userMoney;
+
 let CroissantQuantity;
 let removeCroissant;
 let addCroissant;
@@ -29,6 +30,7 @@ function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let choice = document.getElementById("itemField").value;
 
+    /****************************
     if (choice == 1){
         croissantQuantity = "1x";
     } else if (choice == 2){
@@ -46,6 +48,7 @@ function addItem(){
     } else if (choice == 8){
         item = "Cappuccino";
     }
+    ****************************/
 
     if (choice == 1){
         item = "Croissant";
