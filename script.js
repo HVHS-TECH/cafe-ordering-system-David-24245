@@ -71,55 +71,18 @@ function calculateChange(_money, _price){
     return change;
 }
 
-function goToReceiptPage(){
+function goToReceipt(){
     userName = document.getElementById("nameField").value;
     userMoney = document.getElementById("moneyField").value;
 
-    const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
+    localStorage.setItem("userName", userName);
+    localStorage.setItem("userMoney", userMoney);
+    localStorage.setItem("itemList", itemList);
+    localStorage.setItem("priceList", priceList);
+    localStorage.setItem("orderTotal", orderTotal);
 
-    let Items1 = [];
-    let quantities = [];
-    let unitPrices = [];
-
-    for (let i = 0; i < itemList.length; i++) {
-        let currentItem = itemList[i]
-        let currentPrice = priceList[i]
-        let Index = Items1.indexOf(currentItem);
-
-        if(Index === -1) {
-            Items1.push(currentItem);
-            quantities.push(1);
-            unitPrices.push(currentPrice);
-        } else {
-            quantities[Index] += 1;
-        }
-    }
-
-    RECEIPT_OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
-
-    for (let i = 0; i < Items1.length; i++) {
-        let lineTotal = quantities[i] * unitPrices[i];
-        RECEIPT_OUTPUT.innerHTML += quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "<br>";
-    }
-
-    RECEIPT_OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
-
-    if (userMoney < orderTotal){
-        RECEIPT_OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
-    } else {
-        let change = calculateChange(userMoney, orderTotal);
-        RECEIPT_OUTPUT.innerHTML += "<p>Payment: $" + userMoney + "</p>";
-        RECEIPT_OUTPUT.innerHTML += "<p>Change: $" + change + "</p>";
-    }
-
-    document.getElementById("orderPage").classList.add("hidden");
-    document.getElementById("receiptPage").classList.remove("hidden");
+    window.location.href = "receipt.html";
 }
-
-    function goToOrderPage(){
-        document.getElementById("orderPage").classList.remove("hidden");
-        document.getElementById("receiptPage").classList.add("hidden");
-    }
 
 function restartOrder(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
