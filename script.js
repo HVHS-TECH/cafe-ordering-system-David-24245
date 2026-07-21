@@ -81,6 +81,10 @@ function goToReceipt(){
     localStorage.setItem("priceList", priceList);
     localStorage.setItem("orderTotal", orderTotal);
 
+    itemList = [];
+    priceList = [];
+    orderTotal = 0;
+
     window.location.href = "receipt.html";
 }
 
