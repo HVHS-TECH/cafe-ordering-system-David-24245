@@ -140,3 +140,7 @@ function restartOrder(){
     OUTPUT.innerHTML = "<p> </p>";
     console.log("Order restarted");
 }
+
+function toggleCart() {
+    document.getElementById("orderSidebar").classList.toggle("hidden");
+}
