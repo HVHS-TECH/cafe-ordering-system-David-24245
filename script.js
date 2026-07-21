@@ -18,7 +18,7 @@ let item;
 let itemPrice;
 let userMoney;
 
-/******
+/******                                                                                        000
 let quantityList = [];
 let CroissantQuantity;
 let removeCroissant;
@@ -33,7 +33,7 @@ function addItem(){
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
     let choice = document.getElementById("itemField").value;
 
-    /****************************
+    /****************************                                                               000
     if (choice == 1){
         croissantQuantity = "1x";
     } else if (choice == 2){
@@ -106,7 +106,7 @@ function goToReceiptPage(){
     RECEIPT_OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
 
     for (let i = 0; i < itemList.length; i++) {
-    RECEIPT_OUTPUT.innerHTML += itemList[i] + /****" - " + quantityList[i] + ****/" - $" + priceList[i] + "<br>";
+    RECEIPT_OUTPUT.innerHTML += itemList[i] + /****" - " + quantityList[i] +                    ****/" - $" + priceList[i] + "<br>";
     }
 
     RECEIPT_OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
