@@ -17,6 +17,9 @@ let orderTotal = 0;
 let item;
 let itemPrice;
 let userMoney;
+let Items1 = [];
+let quantities = [];
+let unitPrices = [];
 
 /****************************
 Functions
