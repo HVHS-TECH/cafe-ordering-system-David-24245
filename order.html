@@ -8,7 +8,6 @@
 
     <button id="cartIcon" onclick="toggleCart()">🛒 Cart</button>
 
-    <!---------------------------- Order Sidebar ----------------------------->
     <div id="orderSidebar" class="hidden">
         <div id="orderPage">
             <div id="spaceForJavaScriptOutput"></div>
@@ -26,16 +25,10 @@
             </form>
 
             <form onsubmit="return false;">
-                <input type="submit" value="View Receipt" onClick="goToReceiptPage()">
+                <input type="submit" value="View Receipt" onClick="goToReceipt()">
                 <input type="submit" value="Restart Order" onClick="restartOrder()">
             </form>
         </div>
-    </div>
-
-    <!---------------------------- Receipt ----------------------------->
-    <div id="receiptPage" class="hidden">
-      <div id="receiptOutput"></div>
-      <button onclick="goToOrderPage()">Back to Order</button>
     </div>
 
 <script src="script.js"></script>
