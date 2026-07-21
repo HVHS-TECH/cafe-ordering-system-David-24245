@@ -80,7 +80,7 @@ function goToReceiptPage(){
 
     const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
 
-    for (let i = 0; i < itemList.length; i+++) {
+    for (let i = 0; i < itemList.length; i++) {
         let currentItem = itemList[i]
         let currentPrice = priceList[i]
         let Index = Items1.indexOf(currentItem);
