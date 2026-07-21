@@ -17,9 +17,6 @@ let orderTotal = 0;
 let item;
 let itemPrice;
 let userMoney;
-let Items1 = [];
-let quantities = [];
-let unitPrices = [];
 
 /****************************
 Functions
@@ -79,6 +76,10 @@ function goToReceiptPage(){
     userMoney = document.getElementById("moneyField").value;
 
     const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
+
+    let Items1 = [];
+    let quantities = [];
+    let unitPrices = [];
 
     for (let i = 0; i < itemList.length; i++) {
         let currentItem = itemList[i]
