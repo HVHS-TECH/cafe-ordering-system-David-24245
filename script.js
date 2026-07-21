@@ -104,7 +104,7 @@ function goToReceiptPage(){
     RECEIPT_OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
 
     for (let i = 0; i < itemList.length; i++) {
-    RECEIPT_OUTPUT.innerHTML += itemList[i] + " - $" + priceList[i] + "<br>";
+    RECEIPT_OUTPUT.innerHTML += itemList[i] + " - " + quantityList[i] + " - $" + priceList[i] + "<br>";
     }
 
     RECEIPT_OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
