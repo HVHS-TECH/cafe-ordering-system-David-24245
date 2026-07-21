@@ -1,13 +1,23 @@
-console.log("Running receipt.js")
-
 function displayReceipt(){
     const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
 
     let userName = localStorage.getItem("userName");
     let userMoney = localStorage.getItem("userMoney");
     let orderTotal = localStorage.getItem("orderTotal");
-    let itemList = localStorage.getItem("itemList").split(",");
-    let priceList = localStorage.getItem("priceList").split(",");
+
+    let itemListRaw = localStorage.getItem("itemList");
+    let priceListRaw = localStorage.getItem("priceList");
+
+    let itemList;
+    let priceList;
+
+    if (itemListRaw === "") {
+        itemList = [];
+        priceList = [];
+    } else {
+        itemList = itemListRaw.split(",");
+        priceList = priceListRaw.split(",");
+    }
 
     let Items1 = [];
     let quantities = [];
