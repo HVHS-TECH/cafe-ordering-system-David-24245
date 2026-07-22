@@ -44,6 +44,8 @@ Functions
     OUTPUT.innerHTML = "<p>Added " + item + " ($" + itemPrice + ") to the order.</p>";
 
     document.getElementById("itemField").value = "";
+
+    updateCartSummary();
 }
 
 function calculateChange(_money, _price){
