@@ -108,4 +108,3 @@ function restartOrder(){
 function toggleCart() {
     document.getElementById("orderSidebar").classList.toggle("hidden");
 }
-
