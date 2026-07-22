@@ -77,7 +77,7 @@ function updateCartSummary(){
 
     for (let i = 0; i < Items1.length; i++) {
         let lineTotal = quantities[i] * unitPrices[i];
-                SUMMARY.innerHTML += "<p>" + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
+        SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
     }
 }
 
