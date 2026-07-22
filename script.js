@@ -53,6 +53,35 @@ Functions
     updateCartSummary();
 }
 
+function updateCartSummary() {
+    const SUMMARY = document.getElementById("cartSummary");
+
+    let item1 = [];
+    let quantities = [];
+    let unitPrices = [];
+
+    for (let i = 0; i < itemList.length; i++) {
+    let currentItem = itemList[i];
+    let currentPrice = priceList[i];
+    let Index = Items1.indexOf(currentItem);
+
+    if (Index === -1) {
+        Items1.push(currentItem);
+        quantities.push(1);
+        unitPrices.push(currentPrice);
+    } else {
+        quantities[Index] += 1;
+    }
+}
+
+Sumamry.innerHTML = "";
+
+for (let i = 0; i < Items1.length; i++) {
+    let lineTotal = quantities[i] * unitPrices[i];
+    SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "</p>";
+    }
+}
+
 function calculateChange(_money, _price){
     let change = _money - _price;
     return change;
