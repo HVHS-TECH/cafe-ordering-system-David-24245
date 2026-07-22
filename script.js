@@ -77,9 +77,19 @@ function updateCartSummary(){
 
     for (let i = 0; i < Items1.length; i++) {
         let lineTotal = quantities[i] * unitPrices[i];
-        SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "</p>";
+                SUMMARY.innerHTML += "<p>" + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
     }
 }
+
+function increaseQuantity(itemName, price) {
+    itemList.push(itemName);
+    priceList.push(price);
+    orderTotal += price;
+
+    updateCartSummary();
+}
+
+function decreaseQuantity
 
 function calculateChange(_money, _price){
     let change = _money - _price;
