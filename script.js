@@ -72,6 +72,7 @@ function updateCartSummary(){
             quantities[Index] += 1;
         }
     }
+}
 
     SUMMARY.innerHTML = "";
 
