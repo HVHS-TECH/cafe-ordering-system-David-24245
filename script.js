@@ -28,10 +28,10 @@ let menuPrices = [6, 7, 7, 4, 9, 9, 9, 9];
 Functions
 ****************************/
 
-    function addItem(){
-        const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-        let choice = document.getElementById("itemField").value;
-        let position = choice - 1;
+function addItem(){
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    let choice = document.getElementById("itemField").value;
+    let position = choice - 1;
 
     if (choice < 1 || choice > menuNames.length || choice === "") {
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
@@ -53,32 +53,32 @@ Functions
     updateCartSummary();
 }
 
-function updateCartSummary() {
+function updateCartSummary(){
     const SUMMARY = document.getElementById("cartSummary");
 
-    let item1 = [];
+    let Items1 = [];
     let quantities = [];
     let unitPrices = [];
 
     for (let i = 0; i < itemList.length; i++) {
-    let currentItem = itemList[i];
-    let currentPrice = priceList[i];
-    let Index = Items1.indexOf(currentItem);
+        let currentItem = itemList[i];
+        let currentPrice = priceList[i];
+        let Index = Items1.indexOf(currentItem);
 
-    if (Index === -1) {
-        Items1.push(currentItem);
-        quantities.push(1);
-        unitPrices.push(currentPrice);
-    } else {
-        quantities[Index] += 1;
+        if (Index === -1) {
+            Items1.push(currentItem);
+            quantities.push(1);
+            unitPrices.push(currentPrice);
+        } else {
+            quantities[Index] += 1;
+        }
     }
-}
 
-Sumamry.innerHTML = "";
+    SUMMARY.innerHTML = "";
 
-for (let i = 0; i < Items1.length; i++) {
-    let lineTotal = quantities[i] * unitPrices[i];
-    SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "</p>";
+    for (let i = 0; i < Items1.length; i++) {
+        let lineTotal = quantities[i] * unitPrices[i];
+        SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "</p>";
     }
 }
 
@@ -101,6 +101,8 @@ function goToReceipt(){
     priceList = [];
     orderTotal = 0;
 
+    document.getElementById("cartSummary").innerHTML = "";
+
     window.location.href = "receipt.html";
 }
 
@@ -118,6 +120,8 @@ function restartOrder(){
     document.getElementById("moneyField").value = "";
 
     OUTPUT.innerHTML = "<p> </p>";
+    document.getElementById("cartSummary").innerHTML = "";
+
     console.log("Order restarted");
 }
 
