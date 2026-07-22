@@ -72,7 +72,6 @@ function updateCartSummary(){
             quantities[Index] += 1;
         }
     }
-}
 
     SUMMARY.innerHTML = "";
 
@@ -80,6 +79,7 @@ function updateCartSummary(){
         let lineTotal = quantities[i] * unitPrices[i];
         SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
     }
+}
 
 
 function increaseQuantity(itemName, price) {
