@@ -64,8 +64,12 @@
 }
 
 #cartIcon i {
-  font-size: 32px;
-  color: black;
+    font-size: 32px;
+    color: white;
+}
+
+#cartIcon i.active {
+    color: black;
 }
 
 #orderSidebar {
