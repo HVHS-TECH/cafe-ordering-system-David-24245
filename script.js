@@ -19,42 +19,22 @@ let itemPrice;
 let userMoney;
 
 /****************************
+Arrays
+****************************/
+let menuNames = ["Croissant", "Bagel", "Muffin", "Brownie", "Espresso", "Latte", "Hot Chocolate", "Cappuccino"];
+let menuPrices = [6, 7, 7, 4, 9, 9, 9, 9];
+
+/****************************
 Functions
 ****************************/
 
-function addItem(){
-    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-    let choice = document.getElementById("itemField").value;
-
-
-    if (choice == 1){
-        item = "Croissant";
-        itemPrice = 6;
-    } else if (choice == 2){
-        item = "Bagel";
-        itemPrice = 7;
-    } else if (choice == 3){
-        item = "Muffin";
-        itemPrice = 7;
-    } else if (choice == 4){
-        item = "Brownie";
-        itemPrice = 4;
-    } else if (choice == 5){
-        item = "Espresso";
-        itemPrice = 9;
-    } else if (choice == 6){
-        item = "Latte";
-        itemPrice = 9;
-    } else if (choice == 7){
-        item = "Hot Chocolate";
-        itemPrice = 9;
-    } else if (choice == 8){
-        item = "Cappuccino";
-        itemPrice = 9;
-    } else {
+    if (choice < 1 || choice > menuNames.length || choice === "") {
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
         return;
     }
+
+    item = menuNames[position];
+    itemPrice = menuPrices[position];
 
     itemList.push(item);
     priceList.push(itemPrice);
