@@ -89,7 +89,18 @@ function increaseQuantity(itemName, price) {
     updateCartSummary();
 }
 
-function decreaseQuantity
+function decreaseQuantity (itemName) {
+    let position = itemList.indexOf(itemName);
+    
+    if (position !== -1) {
+        let price = priceList[position];
+        itemList.splice(position, 1);
+        priceList.splice(position, 1);
+        orderTotal -= price;
+}
+
+updateCartSummary();
+}
 
 function calculateChange(_money, _price){
     let change = _money - _price;
