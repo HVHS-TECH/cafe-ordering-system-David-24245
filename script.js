@@ -28,6 +28,11 @@ let menuPrices = [6, 7, 7, 4, 9, 9, 9, 9];
 Functions
 ****************************/
 
+    function addItem(){
+        const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+        let choice = document.getElementById("itemField").value;
+        let position = choice - 1;
+
     if (choice < 1 || choice > menuNames.length || choice === "") {
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
         return;
