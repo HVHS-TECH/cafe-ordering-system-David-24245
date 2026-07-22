@@ -63,6 +63,11 @@
     background: none;
 }
 
+#cartIcon i {
+  font-size: 32px;
+  color: black;
+}
+
 #orderSidebar {
     position: fixed;
     top: 0;
