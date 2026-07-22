@@ -107,4 +107,5 @@ function restartOrder(){
 
 function toggleCart() {
     document.getElementById("orderSidebar").classList.toggle("hidden");
+    document.getElementById("cartIcon").querySelector("i").classList.toggle("active");
 }
