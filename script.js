@@ -144,7 +144,7 @@ function goToReceipt(){
         OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
         return;
     } else if (userMoney < 0) {
-        OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+        OUTPUT.innerHTML = "<p>Please enter valid payment amount.</p>";
         return;
     }
 
