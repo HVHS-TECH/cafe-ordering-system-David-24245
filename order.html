@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<title>Cafe Menu</title>
+
+    <!-- Links the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Imports the Font Awesome icons used for the shopping cart -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Title shown on the browser tab -->
+    <title>Cafe Menu</title>
+
 </head>
+
 <body>
 
+    <!-- Banner image displayed at the top of the menu page -->
     <img src="Images/CafeBanner.png" alt="Cafe Banner" class="CafeBanner">
 
+    <!-- Menu displays all food and drink items available to order. -->
     <div class="menuGrid">
+
+        <!-- Menu Item 1 -->
         <div class="menuCard">
             <img src="Images/croissant.png" alt="Croissant" class="menuImage">
             <div class="menuRow">
@@ -17,122 +30,153 @@
                 <span class="menuName">Croissant</span>
                 <span class="menuPrice">$6</span>
             </div>
-        <div class="menuText">Buttery, flaky, and baked fresh daily</div>
-    </div>
+            <div class="menuText">Buttery, flaky, and baked fresh daily</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/bagel.png" alt="Bagel" class="menuImage">
+        <!-- Menu Item 2 -->
+        <div class="menuCard">
+            <img src="Images/bagel.png" alt="Bagel" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">2.</span>
                 <span class="menuName">Bagel</span>
                 <span class="menuPrice">$7</span>
             </div>
-        <div class="menuText">Chewy and lightly toasted</div>
-    </div>
+            <div class="menuText">Chewy and lightly toasted</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/muffin.png" alt="Muffin" class="menuImage">
+        <!-- Menu Item 3 -->
+        <div class="menuCard">
+            <img src="Images/muffin.png" alt="Muffin" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">3.</span>
                 <span class="menuName">Muffin</span>
                 <span class="menuPrice">$7</span>
             </div>
-        <div class="menuText">Soft blueberry muffin, baked in house</div>
-    </div>
+            <div class="menuText">Soft blueberry muffin, baked in house</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/Brownie.png" alt="Brownie" class="menuImage">
+        <!-- Menu Item 4 -->
+        <div class="menuCard">
+            <img src="Images/Brownie.png" alt="Brownie" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">4.</span>
                 <span class="menuName">Brownie</span>
                 <span class="menuPrice">$4</span>
             </div>
-        <div class="menuText">Rich and fudgy, made with dark chocolate</div>
-    </div>
+            <div class="menuText">Rich and fudgy, made with dark chocolate</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/Espresso.png" alt="Espresso" class="menuImage">
+        <!-- Menu Item 5 -->
+        <div class="menuCard">
+            <img src="Images/Espresso.png" alt="Espresso" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">5.</span>
                 <span class="menuName">Espresso</span>
                 <span class="menuPrice">$9</span>
             </div>
-        <div class="menuText">Bold and intense single shot</div>
-    </div>
+            <div class="menuText">Bold and intense single shot</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/Latte.png" alt="Latte" class="menuImage">
+        <!-- Menu Item 6 -->
+        <div class="menuCard">
+            <img src="Images/Latte.png" alt="Latte" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">6.</span>
                 <span class="menuName">Latte</span>
                 <span class="menuPrice">$9</span>
             </div>
-        <div class="menuText">Smooth espresso with steamed milk</div>
-    </div>
+            <div class="menuText">Smooth espresso with steamed milk</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/Hot Chocolate.png" alt="Hot Chocolate" class="menuImage">
+        <!-- Menu Item 7 -->
+        <div class="menuCard">
+            <img src="Images/Hot Chocolate.png" alt="Hot Chocolate" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">7.</span>
                 <span class="menuName">Hot Chocolate</span>
                 <span class="menuPrice">$9</span>
             </div>
-        <div class="menuText">Rich cocoa topped with cream</div>
-    </div>
+            <div class="menuText">Rich cocoa topped with cream</div>
+        </div>
 
-    <div class="menuCard">
-        <img src="Images/Cappuccino.png" alt="Cappuccino" class="menuImage">
+        <!-- Menu Item 8 -->
+        <div class="menuCard">
+            <img src="Images/Cappuccino.png" alt="Cappuccino" class="menuImage">
             <div class="menuRow">
                 <span class="menuNumber">8.</span>
                 <span class="menuName">Cappuccino</span>
                 <span class="menuPrice">$9</span>
             </div>
-        <div class="menuText">Espresso with foamed milk on top</div>
+            <div class="menuText">Espresso with foamed milk on top</div>
+        </div>
+
     </div>
 
-</div>
-
+    <!-- Shopping cart button used to open and close the order sidebar -->
     <button id="cartIcon" onclick="toggleCart()">
         <i class="fa-solid fa-cart-shopping"></i>
     </button>
 
+    <!-- Order Sidebar allows the customer to enter their order and payment. -->
     <div id="orderSidebar" class="hidden">
+
         <div id="orderPage">
+
+            <!-- JavaScript displays validation messages here -->
             <div id="spaceForJavaScriptOutput"></div>
 
+            <!-- Customer information and item selection form -->
             <form onsubmit="return false;">
+
                 <label for="nameField">Name:</label>
-                <input type="text" id="nameField" name="formName" placeholder="Name"> 
+                <input type="text" id="nameField" name="formName" placeholder="Name">
+
                 <br>
+
+                <!-- Dropdown menu used to choose an item -->
                 <label for="itemField">Item:</label>
-    <select id="itemField">
-        <option value="">-- Select an item --</option>
-        <option value="1">1. Croissant - $6</option>
-        <option value="2">2. Bagel - $7</option>
-        <option value="3">3. Muffin - $7</option>
-        <option value="4">4. Brownie - $4</option>
-        <option value="5">5. Espresso - $9</option>
-        <option value="6">6. Latte - $9</option>
-        <option value="7">7. Hot Chocolate - $9</option>
-        <option value="8">8. Cappuccino - $9</option>
-        </select>
-    <input type="submit" value="Add Item" onClick="addItem()">
-            <br>
+
+                <select id="itemField">
+                    <option value="">-- Select an item --</option>
+                    <option value="1">1. Croissant - $6</option>
+                    <option value="2">2. Bagel - $7</option>
+                    <option value="3">3. Muffin - $7</option>
+                    <option value="4">4. Brownie - $4</option>
+                    <option value="5">5. Espresso - $9</option>
+                    <option value="6">6. Latte - $9</option>
+                    <option value="7">7. Hot Chocolate - $9</option>
+                    <option value="8">8. Cappuccino - $9</option>
+                </select>
+
+                <!-- Adds the selected item to the order -->
+                <input type="submit" value="Add Item" onclick="addItem()">
+
+                <br>
+
+                <!-- Customer payment input -->
                 <label for="moneyField">Payment:</label>
-                <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
+                <input type="text" id="moneyField" name="formMoney" placeholder="$$$">
+
             </form>
 
+            <!-- Buttons used to complete or restart an order -->
             <form onsubmit="return false;">
-                <input type="submit" value="Complete Order" onClick="goToReceipt()">
-                <input type="submit" value="Restart Order" onClick="restartOrder()">
+
+                <input type="submit" value="Complete Order" onclick="goToReceipt()">
+
+                <input type="submit" value="Restart Order" onclick="restartOrder()">
+
             </form>
 
+            <!-- JavaScript displays the current shopping cart here -->
             <div id="cartSummary"></div>
 
-            
         </div>
+
     </div>
 
-<script src="script.js"></script>
+    <!-- Links the JavaScript file that controls the ordering system -->
+    <script src="script.js"></script>
+
 </body>
 </html>
