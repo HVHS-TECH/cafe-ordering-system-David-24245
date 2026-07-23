@@ -136,6 +136,7 @@
 
 .menuNumber {
     font-size: 25px;
+    color: #B8860B;
 }
 
 .menuName {
@@ -144,9 +145,10 @@
 
 .menuPrice {
     font-size: 20px;
+    color: #B8860B;
 }
 
 .menuText {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
 }
