@@ -113,17 +113,24 @@ function goToReceipt(){
     userMoney = document.getElementById("moneyField").value;
 
     const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-    
+
     if (userName === "") {
         OUTPUT.innerHTML = "<p>Please enter your name.</p>";
         return;
     }
+
     if (itemList.length === 0) {
         OUTPUT.innerHTML = "<p>Please add at least one item.</p>";
         return;
     }
+
     if (userMoney === "") {
         OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+        return;
+    }
+
+    if (userMoney < orderTotal) {
+        OUTPUT.innerHTML = "<p>You don't have enough money to pay for this order. Total: $" + orderTotal + "</p>";
         return;
     }
 
