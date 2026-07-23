@@ -47,15 +47,18 @@
   left: 0;
 }
 
+/* Contains the image */
 .Front {
   position: relative;
   width: 100%;
 }
 
+/* Hides elements from the page */
 .hidden {
   display: none;
 }
 
+/* Styles the cart button and the order sidebar */
 #cartIcon {
     position: fixed;
     top: 15px;
@@ -68,15 +71,18 @@
     background: none;
 }
 
+/*  The defult color of the cart */
 #cartIcon i {
     font-size: 32px;
     color: rgb(187, 185, 185);
 }
 
+/* Changes the color of the cart when it is active */
 #cartIcon i.active {
     color: black;
 }
 
+/* Order sidebar */
 #orderSidebar {
     position: fixed;
     top: 0;
@@ -91,6 +97,7 @@
     z-index: 9;
 }
 
+/* Styles the banner*/
 .CafeBanner {
   width: 100%;
   height: 400px;
@@ -98,10 +105,12 @@
   display: block;
 }
 
+/* Centres the cart summary text */
 #cartSummary {
     text-align: center;
 }
 
+/* Styles the menu grid and cards */
 .menuGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -111,7 +120,7 @@
   max-width: 1400px;
   margin: 0 auto;
 }
-
+ /* Styles every individual menu card */
 .menuCard {
     width: 320px;
     height: 400px;
@@ -122,6 +131,7 @@
     box-sizing: border-box;
 }
 
+/* Menu item image */
 .menuImage {
     width: 100%;
     height: 180px;
@@ -131,6 +141,7 @@
     margin-bottom: 15px;
 }
 
+/* Displays the item number, name and price in one row */
 .menuRow {
     display: flex;
     justify-content: space-between;
@@ -139,24 +150,29 @@
     margin-bottom: 15px;
 }
 
+/* Item number */
 .menuNumber {
     font-size: 25px;
     color: #B8860B;
 }
 
+/* Item name */
 .menuName {
     font-size: 25px;
 }
 
+/* Item price */
 .menuPrice {
     font-size: 20px;
     color: #B8860B;
 }
 
+/* Item description */
 .menuText {
     font-size: 18px;
 }
 
+/* Styles the printed receipt shown after an order */
 .receipt {
     width: 280px;
     margin: 40px auto;
@@ -168,6 +184,7 @@
     text-align: center;
 }
 
+/* Receipt headings */
 .receipt h2 {
     margin-bottom: 0;
 }
@@ -177,23 +194,27 @@
     font-weight: normal;
 }
 
+/* Receipt table */
 .receipt table {
     width: 100%;
     margin: 15px 0;
     border-collapse: collapse;
 }
 
+/* Receipt table cells */
 .receipt th, .receipt td {
     text-align: left;
     padding: 4px 6px;
     border-bottom: 1px solid #ddd;
 }
 
+/* Receipt information */
 .receipt p {
     text-align: left;
     margin: 6px 0;
 }
 
+/* Return link */
 .receipt a {
     display: block;
     margin-top: 15px;
