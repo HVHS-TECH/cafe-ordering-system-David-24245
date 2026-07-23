@@ -129,9 +129,8 @@ function goToReceipt(){
         return;
     }
 
-    if (userMoney < orderTotal) {
-        OUTPUT.innerHTML = "<p>Not enough money to purchase. Total: $" + orderTotal + "</p>";
-        return;
+    if (userMoney < orderTotal){
+        RECEIPT_OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
     }
 
     localStorage.setItem("userName", userName);
