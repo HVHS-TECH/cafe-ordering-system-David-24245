@@ -61,9 +61,9 @@ function addItem(){
 function updateCartSummary(){
     const SUMMARY = document.getElementById("cartSummary");
 
-    let Items1 = [];       // list of distinct item names
-    let quantities = [];   // how many of each distinct item, matched by position to Items1
-    let unitPrices = [];   // price per single item, matched by position to Items1
+    let Items1 = [];
+    let quantities = [];
+    let unitPrices = [];
 
     // Count how many of each item appear in itemList
     for (let i = 0; i < itemList.length; i++) {
@@ -84,7 +84,7 @@ function updateCartSummary(){
 
     SUMMARY.innerHTML = "";
 
-    // Print one line per distinct item, with +/- buttons to adjust quantity
+    // One line per distinct item, with +/- buttons to adjust quantity
     for (let i = 0; i < Items1.length; i++) {
         let lineTotal = quantities[i] * unitPrices[i];
         SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
