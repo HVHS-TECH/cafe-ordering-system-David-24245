@@ -130,7 +130,7 @@ function goToReceipt(){
     }
 
     if (userMoney < orderTotal) {
-        OUTPUT.innerHTML = "<p>You don't have enough money to pay for this order. Total: $" + orderTotal + "</p>";
+        OUTPUT.innerHTML = "<p>Not enough money to purchase. Total: $" + orderTotal + "</p>";
         return;
     }
 
