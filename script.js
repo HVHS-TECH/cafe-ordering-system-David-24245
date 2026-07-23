@@ -112,6 +112,19 @@ function goToReceipt(){
     userName = document.getElementById("nameField").value;
     userMoney = document.getElementById("moneyField").value;
 
+    if (userName === "") {
+        OUTPUT.innerHTML = "<p>Please enter your name.</p>";
+        return;
+    }
+    if (itemList.length === 0) {
+        OUTPUT.innerHTML = "<p>Please add at least one item.</p>";
+        return;
+    }
+    if (userMoney === "") {
+        OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+        return;
+    }
+
     localStorage.setItem("userName", userName);
     localStorage.setItem("userMoney", userMoney);
     localStorage.setItem("itemList", itemList);
