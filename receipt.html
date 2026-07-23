@@ -17,18 +17,26 @@
 
 <!-- Table showing each item that was ordered -->
         <table>
-            <tr><th>Quantity</th><th>Item</th><th>Price</th></tr>
+ <!-- Table headings -->
+            <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+<!-- JavaScript adds the ordered items here -->
             <tbody id="receiptRows"></tbody>
         </table>
 
+<!-- Displays the order total, payment amount and change -->
         <p>Total Cost: $<span id="receiptTotal"></span></p>
         <p>Money: $<span id="receiptMoney"></span></p>
         <p>Change: $<span id="receiptChange"></span></p>
 
+<!-- Returns the user to the ordering page -->
         <a href="order.html">Restart Order</a>
     </div>
 
-
+<!-- Links the JavaScript file that loads the receipt information -->
 <script src="receipt.js"></script>
 </body>
 </html>
