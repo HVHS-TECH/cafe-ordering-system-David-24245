@@ -143,6 +143,9 @@ function goToReceipt(){
     if (userMoney === "") {
         OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
         return;
+    } else if (userMoney < 0) {
+        OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+        return;
     }
 
     // Check enough money was given to cover the order
