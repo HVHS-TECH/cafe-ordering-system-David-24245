@@ -6,7 +6,21 @@
 </head>
 <body>
 
-    <div id="receiptOutput"></div>
+    <div class="receipt">
+        <h2>Receipt</h2>
+        <h3>Cafe</h3>
+        <p>Name: <span id="receiptName"></span></p>
+
+        <table>
+            <tr><th>Quantity</th><th>Item</th><th>Price</th></tr>
+            <tbody id="receiptRows"></tbody>
+        </table>
+
+        <p>Total Cost: $<span id="receiptTotal"></span></p>
+        <p>Money: $<span id="receiptMoney"></span></p>
+        <p>Change: $<span id="receiptChange"></span></p>
+    </div>
+
     <a href="order.html">Restart Order</a>
 
 <script src="receipt.js"></script>

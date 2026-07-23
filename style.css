@@ -151,3 +151,40 @@
 .menuText {
     font-size: 18px;
 }
+
+.receipt {
+    width: 280px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    font-family: "Lora", serif;
+    text-align: center;
+}
+
+.receipt h2 {
+    margin-bottom: 0;
+}
+
+.receipt h3 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.receipt table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+.receipt th, .receipt td {
+    text-align: left;
+    padding: 4px 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+.receipt p {
+    text-align: left;
+    margin: 6px 0;
+}

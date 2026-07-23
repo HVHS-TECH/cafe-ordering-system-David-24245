@@ -1,6 +1,4 @@
 function displayReceipt(){
-    const RECEIPT_OUTPUT = document.getElementById("receiptOutput");
-
     let userName = localStorage.getItem("userName");
     let userMoney = localStorage.getItem("userMoney");
     let orderTotal = localStorage.getItem("orderTotal");
@@ -37,22 +35,18 @@ function displayReceipt(){
         }
     }
 
-    RECEIPT_OUTPUT.innerHTML = "<p>Receipt for " + userName + ":</p>";
+    document.getElementById("receiptName").textContent = userName;
+    document.getElementById("receiptTotal").textContent = orderTotal;
+    document.getElementById("receiptMoney").textContent = userMoney;
 
+    const ROWS = document.getElementById("receiptRows");
+    ROWS.innerHTML = "";
     for (let i = 0; i < Items1.length; i++) {
-        let lineTotal = quantities[i] * unitPrices[i];
-        RECEIPT_OUTPUT.innerHTML += quantities[i] + "x " + Items1[i] + " - $" + lineTotal + "<br>";
+        ROWS.innerHTML += "<tr><td>" + quantities[i] + "</td><td>" + Items1[i] + "</td><td>$" + unitPrices[i] + "</td></tr>";
     }
 
-    RECEIPT_OUTPUT.innerHTML += "<p>Total: $" + orderTotal + "</p>";
-
-    if (userMoney < orderTotal){
-        RECEIPT_OUTPUT.innerHTML += "<p>Sorry, you can't afford the order.</p>";
-    } else {
-        let change = userMoney - orderTotal;
-        RECEIPT_OUTPUT.innerHTML += "<p>Payment: $" + userMoney + "</p>";
-        RECEIPT_OUTPUT.innerHTML += "<p>Change: $" + change + "</p>";
-    }
+    let change = userMoney - orderTotal;
+    document.getElementById("receiptChange").textContent = change;
 }
 
 displayReceipt();
