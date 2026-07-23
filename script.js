@@ -139,14 +139,13 @@ function goToReceipt(){
         return;
     }
 
-    // Check payment amount was entered
-    if (userMoney === "") {
-        OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
-        return;
-    } else if (userMoney < 0) {
-        OUTPUT.innerHTML = "<p>Please enter valid payment amount.</p>";
-        return;
-    }
+if (userMoney === "") {
+    OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+    return;
+} else if (isNaN(userMoney) || userMoney < 0) {
+    OUTPUT.innerHTML = "<p>Please enter a valid payment amount.</p>";
+    return;
+}
 
     // Check enough money was given to cover the order
     if (userMoney < orderTotal){
