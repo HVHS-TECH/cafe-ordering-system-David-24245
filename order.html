@@ -105,21 +105,6 @@
                 <input type="text" id="nameField" name="formName" placeholder="Name"> 
                 <br>
                 <label for="itemField">Item:</label>
-                <input type="text" id="itemField" placeholder="1-8">
-                <input type="submit" value="Add Item" onClick="addItem()">
-                <br>
-                <label for="moneyField">Payment:</label>
-                <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
-            </form>
-
-            <form onsubmit="return false;">
-                <input type="submit" value="Complete Order" onClick="goToReceipt()">
-                <input type="submit" value="Restart Order" onClick="restartOrder()">
-            </form>
-
-            <div id="cartSummary"></div>
-
-            <label for="itemField">Item:</label>
 <select id="itemField">
     <option value="">-- Select an item --</option>
     <option value="1">1. Croissant - $6</option>
@@ -132,6 +117,19 @@
     <option value="8">8. Cappuccino - $9</option>
 </select>
 <input type="submit" value="Add Item" onClick="addItem()">
+                <br>
+                <label for="moneyField">Payment:</label>
+                <input type="text" id="moneyField" name="formMoney" placeholder="$$$"> 
+            </form>
+
+            <form onsubmit="return false;">
+                <input type="submit" value="Complete Order" onClick="goToReceipt()">
+                <input type="submit" value="Restart Order" onClick="restartOrder()">
+            </form>
+
+            <div id="cartSummary"></div>
+
+            
         </div>
     </div>
 
