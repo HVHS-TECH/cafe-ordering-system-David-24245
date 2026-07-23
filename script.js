@@ -112,6 +112,8 @@ function goToReceipt(){
     userName = document.getElementById("nameField").value;
     userMoney = document.getElementById("moneyField").value;
 
+    const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+    
     if (userName === "") {
         OUTPUT.innerHTML = "<p>Please enter your name.</p>";
         return;
