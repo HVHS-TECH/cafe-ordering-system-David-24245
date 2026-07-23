@@ -1,3 +1,4 @@
+/* This styles the cafe image shown on the first page */
 .CafeNew {
   width: 100%;
   height: 929px;
@@ -5,6 +6,7 @@
   display: block;
 }
 
+/* This styles the "order" button (in the first page) and it's hover animation */
 .order {
   position: absolute;
   top: 360px;
@@ -21,6 +23,7 @@
   transition: transform 0.5s ease;
 }
 
+/* Creates the sliding animation */
 .order::before {
   content: "";
   position: absolute;
@@ -33,11 +36,13 @@
   z-index: -1;
 }
 
+/* Enlarges the order button and changes text color when hovered on */
 .order:hover {
   color: black;
   transform: scale(1.1);
 }
 
+/* Slides the white background across the button */
 .order:hover::before {
   left: 0;
 }
