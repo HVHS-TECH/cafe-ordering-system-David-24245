@@ -147,7 +147,7 @@ function goToReceipt(){
 
     // Check enough money was given to cover the order
     if (userMoney < orderTotal){
-        OUTPUT.innerHTML = "<p>Not enough money to purchase. Total: $" + orderTotal + "</p>";   // FIXED: was RECEIPT_OUTPUT, which doesn't exist here
+        OUTPUT.innerHTML = "<p>Not enough money to purchase. Total: $" + orderTotal + "</p>";
         return;
     }
 
