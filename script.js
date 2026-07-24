@@ -42,8 +42,9 @@ function addItem(){
     }
 
     // Look up the item's name and price from the menu arrays
-    item = menuNames[position];
-    itemPrice = menuPrices[position];
+    const selectedItem = menu[position];
+    item = selectedItem.name;
+    itemPrice = selectedItem.price;
 
     // Add the item to the order and update the running total
     itemList.push(item);
@@ -61,15 +62,12 @@ function addItem(){
 function updateCartSummary(){
     const SUMMARY = document.getElementById("cartSummary");
 
-    let Items1 = [];
-    let quantities = [];
-    let unitPrices = [];
+    let cartItems = [];
 
     // Count how many of each item appear in itemList
     for (let i = 0; i < itemList.length; i++) {
-        let currentItem = itemList[i];
-        let currentPrice = priceList[i];
-        let Index = Items1.indexOf(currentItem);
+        const currentItem = itemList[i];
+        const currentPrice = priceList[i];
 
         if (Index === -1) {
             // First time seeing this item — add it as a new entry
