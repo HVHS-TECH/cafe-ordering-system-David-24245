@@ -129,6 +129,12 @@
     padding: 25px;
     text-align: center;
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   /* ADDED: smooths the hover animation */
+}
+
+.menuCard:hover {
+    transform: scale(1.05);   /* ADDED: slightly enlarges the card */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);   /* ADDED: adds a shadow around the card */
 }
 
 /* Menu item image */
