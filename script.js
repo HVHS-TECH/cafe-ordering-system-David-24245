@@ -12,7 +12,7 @@ let userMoney;
 /****************************
 Arrays
 ****************************/
-// This is the menu's data - each object holds a name and price together
+// This is the menu's data, each object holds a name and price together
 const menu = [ 
     { name: "Croissant", price: 6 }, 
     { name: "Bagel", price: 7 }, 
