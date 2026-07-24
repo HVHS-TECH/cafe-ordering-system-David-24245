@@ -12,7 +12,7 @@ let userMoney;
 /****************************
 Arrays
 ****************************/
-// This is the menu's data menuNames[i] and menuPrices[i] refer to the same item
+// This is the menu's data - each object holds a name and price together
 const menu = [ 
     { name: "Croissant", price: 6 }, 
     { name: "Bagel", price: 7 }, 
@@ -41,7 +41,7 @@ function addItem(){
         return;
     }
 
-    // Look up the item's name and price from the menu arrays
+    // Look up the item's name and price from the menu array
     const selectedItem = menu[position];
     item = selectedItem.name;
     itemPrice = selectedItem.price;
@@ -58,34 +58,40 @@ function addItem(){
     updateCartSummary();
 }
 
-// Resets the summary shown in the sidebar, grouping repeated items into one line with a quantity
+// Rebuilds the summary shown in the sidebar, grouping repeated items into one line with a quantity
 function updateCartSummary(){
     const SUMMARY = document.getElementById("cartSummary");
 
-    let cartItems = [];
+    let cartItems = [];   // each entry is an object: { name, quantity, price }
 
     // Count how many of each item appear in itemList
     for (let i = 0; i < itemList.length; i++) {
         const currentItem = itemList[i];
         const currentPrice = priceList[i];
 
-        if (Index === -1) {
-            // First time seeing this item — add it as a new entry
-            Items1.push(currentItem);
-            quantities.push(1);
-            unitPrices.push(currentPrice);
+        let existingEntry = null;
+        for (let i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].name === currentItem) {
+                existingEntry = cartItems[i];
+            }
+        }
+
+        if (existingEntry === null) {
+            // First time seeing this item — add it as a new object
+            cartItems.push({ name: currentItem, quantity: 1, price: currentPrice });
         } else {
             // Already seen this item — just increase its quantity
-            quantities[Index] += 1;
+            existingEntry.quantity += 1;
         }
     }
 
     SUMMARY.innerHTML = "";
 
     // One line per distinct item, with +/- buttons to adjust quantity
-    for (let i = 0; i < Items1.length; i++) {
-        let lineTotal = quantities[i] * unitPrices[i];
-        SUMMARY.innerHTML += "<p>" + quantities[i] + "x " + Items1[i] + " - $" + lineTotal + " " + "<button onclick=\"decreaseQuantity('" + Items1[i] + "')\">-</button> " + "<button onclick=\"increaseQuantity('" + Items1[i] + "', " + unitPrices[i] + ")\">+</button>" + "</p>";
+    for (let i = 0; i < cartItems.length; i++) {
+        const CART_ITEM = cartItems[i];
+        const lineTotal = CART_ITEM.quantity * CART_ITEM.price;
+        SUMMARY.innerHTML += "<p>" + CART_ITEM.quantity + "x " + CART_ITEM.name + " - $" + lineTotal + " " + "<button onclick=\"decreaseQuantity('" + CART_ITEM.name + "')\">-</button> " + "<button onclick=\"increaseQuantity('" + CART_ITEM.name + "', " + CART_ITEM.price + ")\">+</button>" + "</p>";
     }
 }
 
@@ -103,7 +109,7 @@ function decreaseQuantity (itemName) {
     let position = itemList.indexOf(itemName);   // find the first matching item
 
     if (position !== -1) {
-        let price = priceList[position];
+        const price = priceList[position];
         itemList.splice(position, 1);    // remove one entry from itemList at that position
         priceList.splice(position, 1);   // remove the matching price too
         orderTotal -= price;
@@ -114,7 +120,7 @@ function decreaseQuantity (itemName) {
 
 // Calculates change owed: money given minus the price/total
 function calculateChange(_money, _price){
-    let change = _money - _price;
+    const change = _money - _price;
     return change;
 }
 
@@ -137,16 +143,16 @@ function goToReceipt(){
         return;
     }
 
-if (userMoney === "") {
-    OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
-    return;
-} else if (userMoney < 0) {
-    OUTPUT.innerHTML = "<p>Please enter a valid payment amount.</p>";
-    return;
-} else if (isNaN(userMoney)) {
-    OUTPUT.innerHTML = "<p>Payment must be a number.</p>";
-    return;
-}
+    if (userMoney === "") {
+        OUTPUT.innerHTML = "<p>Please enter a payment amount.</p>";
+        return;
+    } else if (userMoney < 0) {
+        OUTPUT.innerHTML = "<p>Please enter a valid payment amount.</p>";
+        return;
+    } else if (isNaN(userMoney)) {
+        OUTPUT.innerHTML = "<p>Payment must be a number.</p>";
+        return;
+    }
 
     // Check enough money was given to cover the order
     if (userMoney < orderTotal){
@@ -161,7 +167,7 @@ if (userMoney === "") {
     localStorage.setItem("priceList", priceList);
     localStorage.setItem("orderTotal", orderTotal);
 
-    // Reset the order now that it's been saved, ready for the next customer
+    // Reset the order now that it's been saved, ready for the next order
     itemList = [];
     priceList = [];
     orderTotal = 0;
