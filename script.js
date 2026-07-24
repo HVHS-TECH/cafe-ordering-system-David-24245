@@ -13,8 +13,17 @@ let userMoney;
 Arrays
 ****************************/
 // This is the menu's data menuNames[i] and menuPrices[i] refer to the same item
-let menuNames = ["Croissant", "Bagel", "Muffin", "Brownie", "Espresso", "Latte", "Hot Chocolate", "Cappuccino"];
-let menuPrices = [6, 7, 7, 4, 9, 9, 9, 9];
+const menu = [ 
+    { name: "Croissant", price: 6 }, 
+    { name: "Bagel", price: 7 }, 
+    { name: "Muffin", price: 7 }, 
+    { name: "Brownie", price: 4 }, 
+    { name: "Espresso", price: 9 }, 
+    { name: "Latte", price: 9 }, 
+    { name: "Hot Chocolate", price: 9 }, 
+    { name: "Cappuccino", price: 9 } 
+]; 
+
 
 /****************************
 Functions
@@ -27,7 +36,7 @@ function addItem(){
     let position = choice - 1;   // convert item number (1-8) into an array index (0-7)
 
     // Reject empty or out-of-range choices
-    if (choice < 1 || choice > menuNames.length || choice === "") {
+    if (choice < 1 || choice > menu.length || choice === "") {
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
         return;
     }
