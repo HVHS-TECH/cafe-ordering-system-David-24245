@@ -1,14 +1,13 @@
-
 /* This piece of code loads the customer's order, groups identical items together, and displays the completed receipt*/
 function displayReceipt(){
     // Retrieves the saved customer information
-    let userName = localStorage.getItem("userName");
-    let userMoney = localStorage.getItem("userMoney");
-    let orderTotal = localStorage.getItem("orderTotal");
+    const userName = localStorage.getItem("userName");
+    const userMoney = localStorage.getItem("userMoney");
+    const orderTotal = localStorage.getItem("orderTotal");
 
     // Retrieve the saved item and price lists
-    let itemListRaw = localStorage.getItem("itemList");
-    let priceListRaw = localStorage.getItem("priceList");
+    const itemListRaw = localStorage.getItem("itemList");
+    const priceListRaw = localStorage.getItem("priceList");
 
     let itemList;
     let priceList;
@@ -23,25 +22,27 @@ function displayReceipt(){
         priceList = priceListRaw.split(",");
     }
 
-    // Arrays used to group identical items together
-    let Items1 = [];
-    let quantities = [];
-    let unitPrices = [];
+    // Array used to group identical items together — each entry is an object: { name, quantity, price }
+    let receiptItems = [];
 
     // Count how many of each item were ordered
     for (let i = 0; i < itemList.length; i++) {
-        let currentItem = itemList[i];
-        let currentPrice = priceList[i];
-        let Index = Items1.indexOf(currentItem);
+        const currentItem = itemList[i];
+        const currentPrice = priceList[i];
 
-        if (Index === -1) {
+        let existingEntry = null;
+        for (let i = 0; i < receiptItems.length; i++) {
+            if (receiptItems[i].name === currentItem) {
+                existingEntry = receiptItems[i];
+            }
+        }
+
+        if (existingEntry === null) {
     // First time the item has appeared
-            Items1.push(currentItem);
-            quantities.push(1);
-            unitPrices.push(currentPrice);
+            receiptItems.push({ name: currentItem, quantity: 1, price: currentPrice });
         } else {
     // Increase the quantity of an existing item
-            quantities[Index] += 1;
+            existingEntry.quantity += 1;
         }
     }
 
@@ -52,12 +53,13 @@ function displayReceipt(){
 
     const ROWS = document.getElementById("receiptRows");
     ROWS.innerHTML = "";
-    for (let i = 0; i < Items1.length; i++) {
-        ROWS.innerHTML += "<tr><td>" + quantities[i] + "</td><td>" + Items1[i] + "</td><td>$" + unitPrices[i] + "</td></tr>";
+    for (let i = 0; i < receiptItems.length; i++) {
+        const RECEIPT_ITEM = receiptItems[i];
+        ROWS.innerHTML += "<tr><td>" + RECEIPT_ITEM.quantity + "</td><td>" + RECEIPT_ITEM.name + "</td><td>$" + RECEIPT_ITEM.price + "</td></tr>";
     }
 
     // Calculate and display the customer's change
-    let change = userMoney - orderTotal;
+    const change = userMoney - orderTotal;
     document.getElementById("receiptChange").textContent = change;
 }
 
