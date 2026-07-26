@@ -35,7 +35,7 @@ function addItem(){
     let choice = document.getElementById("itemField").value;
     let position = choice - 1;   // convert item number (1-8) into an array index (0-7)
 
-    // Reject empty or out-of-range choices
+    // Reject empty or out of range choices
     if (choice < 1 || choice > menu.length || choice === "") {
         OUTPUT.innerHTML = "<p>Please enter a valid item number (1-8).</p>";
         return;
